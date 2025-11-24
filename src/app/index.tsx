@@ -9,13 +9,13 @@ export default function Index() {
 
   // dummy code - it was just to test if connection to supabase is succesful or not
 
-  async function testConnection() {
-    const { data, error } = await supabase.from('test').select('id').limit(1);
-    if (error) console.log('Connection failed', error);
-    else console.log('Connected');
-  }
+  // async function testConnection() {
+  //   const { data, error } = await supabase.from('test').select('id').limit(1);
+  //   if (error) console.log('Connection failed', error);
+  //   else console.log('Connected');
+  // }
 
-  testConnection()
+  // testConnection()
 
   return (
     <View
@@ -29,6 +29,7 @@ export default function Index() {
       
       <Link href="/(doctor-portal)/" style={styles.button}>Log in as a doctor</Link>
       <Link href="/(patient-portal)/" style={styles.button}>Log in as a patient</Link>
+      <Link href="/demo" style={styles.button}>Testing Grounds</Link>
     </View>
   );
 }
